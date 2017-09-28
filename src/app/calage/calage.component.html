@@ -1,0 +1,13 @@
+<fieldset>
+  <legend>กรอกข้อมูล</legend>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" (change)="onSelect(f)">
+    ระบุวันเกิด : <input type="date" name="dob" id="dob" #dob="ngModel" ngModel><br> วันที่คำนวน : <input type="date" name="dateto"
+      id="dateto" #dateto="ngModel" ngModel><br>
+    <input type="number" name="age" id="age" [(ngModel)]="dobCal" ngModel><br>
+    <button>SUBMIT</button>
+  </form>
+</fieldset>
+<fieldset>
+  <legend>แสดงข้อมูล</legend>
+  Year of DoB : {{dobYear}}<br> Year of Date to : {{datetoYear}}<br> Age Cal to Year : {{dobCal}}<br>
+</fieldset>
